@@ -1,0 +1,23 @@
+version: '3.7'
+
+services:
+  shorturl:
+    image: shorturl
+    environment:
+      - spring.profiles.active
+    ports:
+      - 8888:8888
+    depends_on:
+      - transform
+    networks:
+      - external_access
+
+  transform:
+    image: transform
+    environment:
+      - spring.profiles.active
+    networks:
+      - external_access
+
+networks:
+  external_access:
