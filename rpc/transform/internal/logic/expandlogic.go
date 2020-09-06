@@ -31,7 +31,7 @@ func (l *ExpandLogic) Expand(in *transform.ExpandReq) (*transform.ExpandResp, er
 	}
 
 	return &transform.ExpandResp{
-		Url: res.Url,
+		Url: res.Url + ", haha",
 	}, nil
 	// return &transform.ExpandResp{}, nil
 }

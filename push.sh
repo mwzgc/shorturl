@@ -2,6 +2,8 @@
 
 docker login --username=mawenzhong
 
+./build.sh
+
 docker tag shorturl mawenzhong/go_shorturl:latest
 docker push mawenzhong/go_shorturl:latest
 
